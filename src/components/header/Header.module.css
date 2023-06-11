@@ -1,0 +1,35 @@
+.header{
+    width: 1440px;
+    height: 64px;
+    background-color: #D1D1D1;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btnContainer{
+    display: flex;
+}
+
+.first{
+    background-color: #868686;
+    height: 32px;
+    width: 180px;
+}
+
+.second{
+    background-color: #515151;
+    height: 32px;
+    width: 120px;
+}
+
+.button{
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5%;
+    justify-content: center;
+    cursor: pointer;
+
+}
