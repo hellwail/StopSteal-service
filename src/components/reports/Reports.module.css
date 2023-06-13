@@ -1,0 +1,9 @@
+.h1{
+    background-color: #D1D1D1;
+    width: 200px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 160px;
+}
