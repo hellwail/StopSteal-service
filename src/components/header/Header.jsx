@@ -1,16 +1,40 @@
 import React from "react";
-import css from './Header.module.css'
-import classNames from 'classnames'
+import { NavLink, Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import "./header.scss";
+import { rememberPath } from "../../storage/action";
+import { signOut } from "../../storage/action";
+import logo from "../../assets/logo.svg"
+
 
 const Header = () => {
-    return(
-        <header className= {css.header}>
-            <div className={css.btnContainer}>
-                <button className={classNames(css.first, css.button)}>button 1</button>                
-                <button className={classNames(css.second, css.button)}>button 2</button>
-            </div>
-        </header>
-    )
-}
+  const isLogin = useSelector(state => state.isLogin);
+  const dispath = useDispatch();
+
+  const handleClick = () => {
+    dispath(rememberPath(window.location.pathname));
+    if (isLogin) dispath(signOut());
+  }
+
+  return (
+    <header className="header">
+      <nav className="nav">
+        <ul className="menu">
+          <li><NavLink className={({ isActive }) =>(isActive ? "item active" : "item")} to="/"><img className="logo" src={logo} alt="logo" /></NavLink></li>
+          
+          {isLogin && (
+            <>
+              <li><NavLink className={`item ${({ isActive }) =>(isActive ? " active" : "")}`} to="cases">Все сообщения о кражаж</NavLink></li>
+              <li><NavLink className={`item ${({ isActive }) =>(isActive ? " active" : "")}`} to="officers">Ответственные сотрудники</NavLink></li>
+            </>
+          )}
+        </ul>
+      </nav>
+      <Link to={isLogin ? "/": "/login"}>
+        <button className="btn" onClick={handleClick}>{isLogin ? "Выйти" : "Войти"}</button>
+      </Link>
+    </header>
+  );
+};
 
 export default Header;

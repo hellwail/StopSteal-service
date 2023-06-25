@@ -1,0 +1,96 @@
+{
+  "cases": [
+    {
+      "id": "123",
+      "status": "new",
+      "licenseNumber": "04040506",
+      "ownerFullName": "Иванов Иван Иванович",
+      "clientId": "1",
+      "type": "дорожный",
+      "color": "черный",
+      "date": "2023-06-16",
+      "description": "",
+      "createdAt": "2023-06-16",
+      "updatedAt": "2022-06-16",
+      "officer": "",
+      "resolution": ""
+    },
+    {
+      "id": "234",
+      "status": "new",
+      "licenseNumber": "723456",
+      "ownerFullName": "Петров Петр Петрович",
+      "clientId": "2",
+      "type": "горный",
+      "color": "черный",
+      "date": "2023-06-05",
+      "description": "",
+      "createdAt": "2023-06-05",
+      "updatedAt": "2023-06-05",
+      "officer": "",
+      "resolution": ""
+    },
+    {
+      "id": "345",
+      "status": "new",
+      "licenseNumber": "1111111113",
+      "ownerFullName": "Семенов Семен Семенович",
+      "clientId": "3",
+      "type": "дорожный",
+      "color": "красный",
+      "date": "2023-06-11",
+      "description": "На раме наклейка Пикачу",
+      "createdAt": "2023-06-11",
+      "updatedAt": "2024-06-11",
+      "officer": "",
+      "resolution": ""
+    }
+  ],
+  "casesTh": [
+    "Статус",
+    "Номер лицензии",
+    "ФИО пользователя",
+    "Тип велосипеда",
+    "Цвет велосипеда",
+    "Дата кражи",
+    "Дополнительная информация",
+    "Завершающий комментарий",
+    "Действие"
+  ],
+  "officers": [
+    {
+      "id": "213",
+      "email": "yarusov1@mail.com",
+      "firstName": "Иван",
+      "lastName": "Ярусов",
+      "password": "1925",
+      "clientId": "2345",
+      "approved": "true"
+    },
+    {
+      "id": "214",
+      "email": "batir@mail.ru",
+      "firstName": "Андрей",
+      "lastName": "Ижутов",
+      "password": "Milkyway",
+      "clientId": "3457",
+      "approved": "false"
+    },
+    {
+      "id": "215",
+      "email": "Leha@mail.ru",
+      "firstName": "Алексей",
+      "lastName": "Зиновьев",
+      "password": "10829347",
+      "clientId": "3456754",
+      "approved": "true"
+    }
+  ],
+  "officersTh": [
+    "Электронная почта",
+    "Имя",
+    "Фамилия",
+    "Статус",
+    "Действие"
+  ]
+}

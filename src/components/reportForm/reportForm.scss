@@ -1,0 +1,134 @@
+@import "../header/header.scss";
+@import "../colors.scss";
+
+.new-case {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .window-case {
+    width: 500px;
+    // background: $white;
+    padding: 20px;
+    border-radius: 10px;
+    align-self: center;
+    .title {
+      margin-top: 10px;
+    }
+    .form-case {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      grid-row-gap: 15px;
+      margin-bottom: 30px;
+      .label {
+        align-self: center;
+      }
+      .input {
+        border: 2px solid #ebebeb;
+        font-family: inherit;
+        font-size: 15px;
+        padding: 0 16px;
+        border-radius: 1.25rem;
+        transition: all 0.375s;
+      }
+      .date::placeholder {
+        opacity: 0.5;
+      }
+      .textarea {
+        resize: none;
+        height: 100px;
+        cursor: auto;
+        &::-webkit-scrollbar {
+          width: 12px;
+          background-color: #f9f9fd;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: #CBCBCB;
+          border-radius: 5px;
+        }
+      }
+      .footnote {
+        font-size: 12px;
+        align-self: center;
+      }
+      .btn {
+        @extend %button;
+        margin-top: 10px;
+        width: 150px;
+        justify-self: end;
+      }
+    }
+    .thanks {
+      margin: 0;
+      font-weight: 600;
+    }
+    .unvisible {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 5s, opacity 0.5s linear;
+    }  
+    .visible {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 5s, opacity 0.5s linear;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 1280px){
+  .new-case {
+    width: 400px;
+    margin: 0 auto;
+    .window-case {
+      width: 400px;
+      height: 500px;
+      .form-case {
+        grid-template-columns: 45% 45%;
+        grid-row-gap: 10px;
+        margin-bottom: 20px;
+        .input {
+          // border: 2px solid #ebebeb;
+          font-family: inherit;
+          font-size: 12px;
+          padding: 0 14px;
+          border-radius: 1rem;
+          transition: all 0.375s;
+        }
+        .textarea {
+          height: 70px;
+          &::-webkit-scrollbar {
+            width: 8px;
+            // background-color: #f9f9fd;
+          }
+          &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+          }
+        }
+        .footnote {
+          font-size: 8px;
+        }
+        .btn {
+          @extend %button;
+          width: 120px;
+        }
+    }
+  }  
+}
+}
+
+@media screen and (max-width: 1024px){
+  .new-case {
+    width: 250px;
+    margin: 0 auto;
+    .form-case{
+      height: 400px;
+    }
+  }    
+}
+
+@media screen and (max-width: 768px){
+  .input{
+    font-size: 6px;
+  }
+}
