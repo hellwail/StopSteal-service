@@ -1,7 +1,6 @@
 @import "../colors.scss";
 @import "../header/header.scss";
 
-
 .caseDetail {
   display: flex;
   flex-direction: column;
@@ -50,6 +49,7 @@
     margin-bottom: 30px;
     padding: 40px 20px 20px 20px;
     border-top: 1px solid $lightblue;
+    align-items: center;
     &::-webkit-scrollbar {
       width: 12px;
       background-color: #f9f9fd;
@@ -107,4 +107,35 @@
 .detail-buttons{
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 1280px){
+  .caseDetail {
+    .btn {
+      width: 250px;
+      height: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .caseDetail {
+    .btn {
+      width: 100px;
+      height: 30px;
+    }
+
+    .form-case{
+      width: 300px;
+      grid-template-columns: 180px 120px;
+      grid-row-gap: 10px;
+      grid-column-gap: 10px;
+      margin-bottom: 30px;
+      padding: 5px 5px 5px 5px;
+      .input{
+        height: 18px;
+        width: 100px;
+      }
+    }
+  }
 }

@@ -36,7 +36,7 @@ const FormLogin = () => {
           dispatch(signUp({...data, id: uniqid(), approved: 
             (officers.find(officer => officer.clientId !== "221194") && data.clientId === "221194") ? "true" : "false"}));
           navigate("/");
-          alert("Ваши данные приняты и находятся на проверке. О ее результатах мы сообщим вам по указанной Вами электронной почте.");
+          alert("Данные приняты. Вы можете ознакомиться с результатами регистрации на укапзанной электронной почте.");
         }
     }
   }

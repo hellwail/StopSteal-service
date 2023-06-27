@@ -101,7 +101,7 @@ const FormNewCase = () => {
             </>
             )
           }
-          
+          <button className="btn button-back" onClick={() => { window.history.back() }}>Назад</button>
           <button className="btn" type="submit">Отправить</button>
         </form>
         <p className={`thanks ${isVisible ? "visible" : "unvisible"}`}>Данные приняты. Спасибо за помощь!</p>

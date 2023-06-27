@@ -113,7 +113,7 @@ export const signUp = (values) => {
   return function (dispatch) {
     dispatch(signUpRequest());
     axios
-      .post("https://sf-final-project-be.herokuapp.com/api/auth/sign_up", {
+      .post("https://sf-final-project-be.herokuapp.com/api/auth/sign_up", {  
         email: values.email,
         firstName: values.firstName,
         lastName: values.lastName,
